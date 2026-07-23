@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thedoodlebooth Studio — Sample Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <div class="nav-inner">
+    <div class="brand" onclick="showPage('home')">
+      <div class="logo-circle">
+        <!-- 
+          TO CUSTOMISE: Replace the <span> below with your logo image.
+          Example: <img src="logo.png" alt="Your Business Logo"/>
+          Make sure logo.png is in the same folder as this file.
+        -->
+        <img src="logo.jpg" alt="Your Business Logo"/>
+      </div>
+      <span class="brand-name">Thedoodlebooth Studio</span>
+      <!-- TO CUSTOMISE: Replace "SnapBooth Studio" with your business name -->
+    </div>
+    <ul class="nav-links">
+      <li><a href="#" class="active" onclick="showPage('home',this)">Home</a></li>
+      <li><a href="#" onclick="showPage('terms',this)">Terms &amp; Conditions</a></li>
+      <li><a href="#" onclick="showPage('privacy',this)">Privacy Policy</a></li>
+      <li><a href="#" onclick="showPage('shipping',this)">Shipping Policy</a></li>
+      <li><a href="#" onclick="showPage('contact',this)">Contact Us</a></li>
+      <li><a href="#" onclick="showPage('cancellation',this)">Cancellation &amp; Refunds</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#" class="active" onclick="showPage('home',this);toggleMenu()">Home</a>
+    <a href="#" onclick="showPage('terms',this);toggleMenu()">Terms &amp; Conditions</a>
+    <a href="#" onclick="showPage('privacy',this);toggleMenu()">Privacy Policy</a>
+    <a href="#" onclick="showPage('shipping',this);toggleMenu()">Shipping Policy</a>
+    <a href="#" onclick="showPage('contact',this);toggleMenu()">Contact Us</a>
+    <a href="#" onclick="showPage('cancellation',this);toggleMenu()">Cancellation &amp; Refunds</a>
+  </div>
+</nav>
+
+<!-- ══ MAIN ══ -->
+<main>
+
+  <!-- ── HOME ── -->
+  <section id="home" class="page-section visible">
+    <div class="hero">
+      <div class="hero-logo">
+        <!-- 
+          TO CUSTOMISE: Replace the span below with your logo image.
+          Example: <img src="logo.png" alt="Your Business Logo"/>
+        -->
+        <img src="logo.jpg" alt="Your Business Logo"/>
+      </div>
+      <h1>Welcome to<br/><em>Thedoodlebooth Studio</em></h1>
+      <!-- TO CUSTOMISE: Replace "SnapBooth Studio" with your business name -->
+      <div class="divider"></div>
+      <p>
+        We bring joy to every occasion with premium photobooth kiosk experiences — 
+        instantly printed memories for weddings, corporate events, malls, and more. 
+        Powered by smart kiosks with UPI payments and zero-staff operations.
+      </p>
+      <!-- TO CUSTOMISE: Replace the paragraph above with your business description -->
+    </div>
+
+    <div class="notice-banner">
+
+    <div class="quick-links">
+      <div class="quick-card" onclick="showPage('terms')">
+        <span class="icon">📋</span>
+        <span>Terms &amp; Conditions</span>
+      </div>
+      <div class="quick-card" onclick="showPage('privacy')">
+        <span class="icon">🔒</span>
+        <span>Privacy Policy</span>
+      </div>
+      <div class="quick-card" onclick="showPage('shipping')">
+        <span class="icon">🚚</span>
+        <span>Shipping Policy</span>
+      </div>
+      <div class="quick-card" onclick="showPage('contact')">
+        <span class="icon">✉️</span>
+        <span>Contact Us</span>
+      </div>
+      <div class="quick-card" onclick="showPage('cancellation')">
+        <span class="icon">↩️</span>
+        <span>Cancellation &amp; Refunds</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TERMS & CONDITIONS ── -->
+  <section id="terms" class="page-section">
+    <div class="page-header">
+      <span class="tag">Legal</span>
+      <h2>Terms &amp; Conditions</h2>
+      <p class="updated">Last updated: July 23, 2026</p>
+    </div>
+    <div class="policy-body">
+      <h3>1. Acceptance of Terms</h3>
+      <p>By accessing or using the SnapBooth Studio photobooth kiosk services ("Service"), you agree to be bound by these Terms and Conditions. If you do not agree, please refrain from using our services.</p>
+
+      <h3>2. Use of Service</h3>
+      <p>Our photobooth kiosks are available for personal, non-commercial use at designated locations. Users must:</p>
+      <ul>
+        <li>Be at least 13 years of age, or have parental consent.</li>
+        <li>Not use the kiosk for any unlawful, offensive, or harmful activity.</li>
+        <li>Not attempt to tamper with, damage, or reverse-engineer the kiosk hardware or software.</li>
+        <li>Ensure content captured is appropriate and does not violate any third-party rights.</li>
+      </ul>
+
+      <h3>3. Payments</h3>
+      <p>All transactions are processed securely via Razorpay. By completing a payment, you confirm that you are authorised to use the payment method provided. Prices displayed at the kiosk are final and inclusive of applicable taxes.</p>
+
+      <h3>4. Intellectual Property</h3>
+      <p>All software, design elements, branding, and interfaces associated with SnapBooth Studio are the exclusive property of SnapBooth Studio and its licensors. You may not reproduce or distribute any part of the Service without prior written consent.</p>
+
+      <h3>5. Limitation of Liability</h3>
+      <p>SnapBooth Studio shall not be liable for any indirect, incidental, or consequential damages arising from your use of the Service, including loss of data, technical failures, or third-party actions. Our total liability in any case shall not exceed the amount paid for the specific transaction.</p>
+
+      <h3>6. Modifications</h3>
+      <p>We reserve the right to update these Terms at any time. Continued use of the Service after changes constitutes acceptance of the revised Terms.</p>
+
+      <h3>7. Governing Law</h3>
+      <p>These Terms are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts of <strong>[Your City]</strong>, India.</p>
+    </div>
+  </section>
+
+  <!-- ── PRIVACY POLICY ── -->
+  <section id="privacy" class="page-section">
+    <div class="page-header">
+      <span class="tag">Privacy</span>
+      <h2>Privacy Policy</h2>
+      <p class="updated">Last updated: January 1, 2025</p>
+    </div>
+    <div class="policy-body">
+      <h3>1. Information We Collect</h3>
+      <p>When you use our kiosk services, we may collect:</p>
+      <ul>
+        <li><strong>Photos &amp; videos</strong> captured during your session (stored temporarily for printing).</li>
+        <li><strong>Payment information</strong> processed via Razorpay (we do not store card/UPI details).</li>
+        <li><strong>Contact details</strong> (name, phone, email) if voluntarily submitted for digital delivery.</li>
+        <li><strong>Device &amp; usage data</strong> such as session timestamps and kiosk location.</li>
+      </ul>
+
+      <h3>2. How We Use Your Information</h3>
+      <ul>
+        <li>To fulfil your photobooth session and deliver prints or digital copies.</li>
+        <li>To process payments securely.</li>
+        <li>To improve our kiosk performance and user experience.</li>
+        <li>To send session receipts or promotional offers (only with your consent).</li>
+      </ul>
+
+      <h3>3. Data Retention</h3>
+      <p>Session photos are automatically deleted from our servers within <strong>72 hours</strong> of your session unless you opt in to cloud storage. Payment records are retained as required by applicable law.</p>
+
+      <h3>4. Data Sharing</h3>
+      <p>We do not sell your personal data. We may share data with:</p>
+      <ul>
+        <li>Payment processors (Razorpay) to complete transactions.</li>
+        <li>Cloud service providers for secure storage.</li>
+        <li>Law enforcement, when required by law.</li>
+      </ul>
+
+      <h3>5. Your Rights</h3>
+      <p>You have the right to access, correct, or request deletion of your personal data. Please reach out to us at <strong>privacy@snapboothstudio.in</strong> for any such requests.</p>
+
+      <h3>6. Cookies</h3>
+      <p>Our website may use cookies for session management and analytics. You may disable cookies in your browser settings, though this may affect certain features.</p>
+
+      <h3>7. Contact</h3>
+      <p>For privacy-related queries, contact us at <strong>privacy@snapboothstudio.in</strong> or write to our registered address.</p>
+    </div>
+  </section>
+
+  <!-- ── SHIPPING POLICY ── -->
+  <section id="shipping" class="page-section">
+    <div class="page-header">
+      <span class="tag">Logistics</span>
+      <h2>Shipping Policy</h2>
+      <p class="updated">Last updated: January 1, 2025</p>
+    </div>
+    <div class="policy-body">
+      <h3>1. Nature of Our Service</h3>
+      <p>SnapBooth Studio primarily provides an <strong>on-location photobooth kiosk experience</strong> where physical prints are dispensed directly at the kiosk immediately after your session. Most of our offerings are delivered in person at the point of use.</p>
+
+      <h3>2. Physical Print Delivery</h3>
+      <p>Prints are generated and dispensed at the kiosk within <strong>30–60 seconds</strong> of session completion. No shipping is required for standard kiosk-based print orders.</p>
+
+      <h3>3. Digital Delivery</h3>
+      <p>Digital copies of your photos (where the option is available) are shared via:</p>
+      <ul>
+        <li><strong>WhatsApp</strong> or <strong>Email</strong> — delivered within 5 minutes of session completion.</li>
+        <li><strong>QR Code Download</strong> — available immediately on screen after the session.</li>
+      </ul>
+      <p>Please ensure your contact details are entered correctly at the kiosk for digital delivery.</p>
+
+      <h3>4. Merchandise / Accessories (if applicable)</h3>
+      <p>If you have purchased photo merchandise (frames, albums, or personalised products) through our website or event packages, shipping is handled as follows:</p>
+      <ul>
+        <li>Processing time: <strong>2–4 business days</strong> after order confirmation.</li>
+        <li>Estimated delivery: <strong>5–10 business days</strong> within India.</li>
+        <li>Shipping charges, if any, will be displayed at checkout.</li>
+        <li>A tracking link will be sent to your registered email or mobile number.</li>
+      </ul>
+
+      <h3>5. Delays &amp; Exceptions</h3>
+      <p>SnapBooth Studio is not responsible for delays caused by courier partners, natural events, or incorrect delivery addresses provided by the customer. In case of non-delivery, please contact us within <strong>7 days</strong> of the expected delivery date.</p>
+
+      <h3>6. Contact for Shipping Issues</h3>
+      <p>For any shipping-related queries, write to <strong>support@snapboothstudio.in</strong> or call us at <strong>+91-XXXXXXXXXX</strong>.</p>
+    </div>
+  </section>
+
+  <!-- ── CONTACT US ── -->
+  <section id="contact" class="page-section">
+    <div class="page-header">
+      <span class="tag">Get in Touch</span>
+      <h2>Contact Us</h2>
+      <p class="updated">We typically respond within 24 business hours.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="c-icon">📍</div>
+        <h4>Our Address</h4>
+        <p>[Bazaar opposite traffic point],<br/>[Senapati, Manipur – 795106],<br/>India</p>
+      </div>
+      <div class="contact-card">
+        <div class="c-icon">📞</div>
+        <h4>Phone</h4>
+        <p><a href="tel:+917085822361">+918731812790-</a><br/>Mon – Sat, 10am – 5pm</p>
+      </div>
+      <div class="contact-card">
+        <div class="c-icon">✉️</div>
+        <h4>Email</h4>
+        <p><a href="mailto:ivanpalmei@gmail.com">Ivanpalmei@gmail.com</a><br/>For general enquiries</p>
+      </div>
+      <div class="contact-card">
+        <div class="c-icon">🌐</div>
+        <h4>Website</h4>
+        <p><a href="#">www.thedoodlebooth.in</a><br/>Available 24/7</p>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send us a Message</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="Rahul Sharma"/>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+91 98765 43210"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="rahul@example.com"/>
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <input type="text" placeholder="Enquiry about photobooth rental"/>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Tell us how we can help you..."></textarea>
+      </div>
+      <button class="btn" onclick="alert('Thank you for reaching out! We will respond shortly.')">Send Message</button>
+    </div>
+  </section>
+
+  <!-- ── CANCELLATION & REFUNDS ── -->
+  <section id="cancellation" class="page-section">
+    <div class="page-header">
+      <span class="tag">Policy</span>
+      <h2>Cancellation &amp; Refunds</h2>
+      <p class="updated">Last updated: January 1, 2025</p>
+    </div>
+    <div class="policy-body">
+      <h3>1. Kiosk Session Payments</h3>
+      <p>Payments made at our photobooth kiosks are for <strong>instant, on-demand services</strong>. Once a session is initiated and payment is processed, the service is considered rendered and the transaction is <strong>non-refundable</strong> under standard conditions.</p>
+
+      <h3>2. Technical Failure Refunds</h3>
+      <p>If a session fails due to a technical malfunction on our end (e.g., printer error, kiosk crash before print delivery), you are eligible for a full refund. To claim this:</p>
+      <ul>
+        <li>Note the kiosk ID and session time displayed on screen.</li>
+        <li>Contact us at <strong>support@snapboothstudio.in</strong> within <strong>48 hours</strong>.</li>
+        <li>Provide your payment reference or UPI transaction ID.</li>
+        <li>Refunds will be processed within <strong>5–7 business days</strong> to the original payment source.</li>
+      </ul>
+
+      <h3>3. Event Package Cancellations</h3>
+      <p>For pre-booked event packages (weddings, corporate events, etc.):</p>
+      <ul>
+        <li><strong>Cancelled 15+ days before event:</strong> Full refund of advance payment.</li>
+        <li><strong>Cancelled 7–14 days before event:</strong> 50% refund of advance payment.</li>
+        <li><strong>Cancelled within 7 days of event:</strong> No refund applicable.</li>
+        <li>Rescheduling (subject to availability) is allowed once at no extra charge if requested at least 7 days prior.</li>
+      </ul>
+
+      <h3>4. Merchandise / Product Orders</h3>
+      <p>For personalised photo merchandise:</p>
+      <ul>
+        <li>Cancellations are accepted within <strong>24 hours</strong> of placing the order, provided production has not started.</li>
+        <li>Once production begins, cancellations are not accepted.</li>
+        <li>Damaged or incorrect items will be replaced at no charge — report within <strong>48 hours of delivery</strong> with a photo.</li>
+      </ul>
+
+      <h3>5. Refund Process</h3>
+      <p>All approved refunds are processed to the <strong>original payment method</strong>. Credit/Debit card refunds may take 5–10 business days depending on your bank. UPI refunds typically appear within 2–3 business days.</p>
+
+      <h3>6. Non-Refundable Situations</h3>
+      <ul>
+        <li>User dissatisfaction with the aesthetics of a successfully printed photo.</li>
+        <li>Incorrect poses or expressions captured during the session.</li>
+        <li>Failure to collect prints from the kiosk after successful dispensing.</li>
+        <li>Technical issues caused by the user's own device (for digital delivery).</li>
+      </ul>
+
+      <h3>7. Contact for Refund Requests</h3>
+      <p>Email us at <strong>refunds@snapboothstudio.in</strong> with your transaction ID, session details, and the reason for your request. Our team will review and respond within 2 business days.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>© 2025 SnapBooth Studio. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="#" onclick="showPage('terms')">Terms &amp; Conditions</a>
+    <a href="#" onclick="showPage('privacy')">Privacy Policy</a>
+    <a href="#" onclick="showPage('shipping')">Shipping Policy</a>
+    <a href="#" onclick="showPage('contact')">Contact Us</a>
+    <a href="#" onclick="showPage('cancellation')">Cancellation &amp; Refunds</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
